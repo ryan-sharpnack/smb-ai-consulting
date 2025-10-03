@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ryan Sharpnack - Professional Services Automation Specialist</title>
+    <title>AI Automation Solutions for Small & Medium Businesses</title>
     <style>
         * {
             margin: 0;
@@ -107,6 +107,23 @@
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             text-align: center;
+            position: relative;
+        }
+
+        .package.featured {
+            border: 3px solid #ff6b35;
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: -15px;
+            right: 20px;
+            background: #ff6b35;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
         }
         
         .package h3 {
@@ -141,73 +158,105 @@
             color: #28a745;
             font-weight: bold;
         }
-        
-        /* Case Studies Section */
-        .case-studies {
-            padding: 60px 0;
+
+        .package-btn {
+            background-color: #003366;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+            transition: background-color 0.3s;
         }
-        
-        .case-studies h2 {
+
+        .package-btn:hover {
+            background-color: #002244;
+        }
+
+        .retainer-section {
             text-align: center;
-            margin-bottom: 50px;
-            font-size: 2.2em;
-            color: #003366;
-        }
-        
-        .cases {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-        }
-        
-        .case {
-            background: #f8f9fa;
+            background: white;
             padding: 30px;
             border-radius: 8px;
-            border-left: 5px solid #003366;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-top: 30px;
         }
-        
-        .case h3 {
+
+        .retainer-section h3 {
             color: #003366;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
         }
-        
-        .case .problem,
-        .case .solution,
-        .case .results {
+
+        .retainer-section p {
             margin-bottom: 15px;
+            font-size: 1.1em;
         }
-        
-        .case .label {
-            font-weight: bold;
+
+        .retainer-section p strong {
             color: #ff6b35;
+            font-size: 1.2em;
         }
         
-        .case .results {
-            background: #e8f5e8;
-            padding: 15px;
-            border-radius: 5px;
-            border-left: 3px solid #28a745;
-        }
-        
-        /* About Section */
-        .about {
+        /* Add-Ons Section */
+        .addons {
             padding: 60px 0;
-            background-color: #f8f9fa;
         }
-        
-        .about h2 {
+
+        .addons h2 {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             font-size: 2.2em;
             color: #003366;
         }
-        
-        .about-content {
-            max-width: 800px;
-            margin: 0 auto;
-            font-size: 1.1em;
+
+        .addons-intro {
             text-align: center;
+            margin-bottom: 50px;
+            font-size: 1.1em;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .addons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .addon-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 5px solid #003366;
+            transition: transform 0.3s;
+        }
+
+        .addon-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        .addon-card h3 {
+            color: #003366;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+
+        .addon-card .price {
+            color: #ff6b35;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .addon-card p {
+            margin-bottom: 15px;
+            color: #666;
         }
         
         /* Contact Section */
@@ -265,7 +314,8 @@
         }
         
         .form-group input,
-        .form-group textarea {
+        .form-group textarea,
+        .form-group select {
             width: 100%;
             padding: 10px;
             border: none;
@@ -287,6 +337,7 @@
             font-size: 1.1em;
             cursor: pointer;
             width: 100%;
+            font-weight: bold;
         }
         
         .submit-btn:hover {
@@ -339,7 +390,7 @@
             }
             
             .service-packages,
-            .cases,
+            .addons-grid,
             .contact-content {
                 grid-template-columns: 1fr;
             }
@@ -349,15 +400,13 @@
             }
             
             .services,
-            .case-studies,
-            .about,
+            .addons,
             .contact {
                 padding: 40px 0;
             }
             
             .services h2,
-            .case-studies h2,
-            .about h2,
+            .addons h2,
             .contact h2 {
                 font-size: 1.8em;
             }
@@ -371,7 +420,7 @@
                 font-size: 1.6em;
             }
             
-            .case {
+            .addon-card {
                 padding: 20px;
             }
             
@@ -388,7 +437,8 @@
             }
             
             .form-group input,
-            .form-group textarea {
+            .form-group textarea,
+            .form-group select {
                 padding: 12px;
                 font-size: 16px;
             }
@@ -417,7 +467,7 @@
                 grid-template-columns: repeat(2, 1fr);
             }
             
-            .cases {
+            .addons-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
             
@@ -430,7 +480,7 @@
                 padding: 25px;
             }
             
-            .case {
+            .addon-card {
                 padding: 25px;
             }
         }
@@ -471,7 +521,7 @@
                 font-size: 1.4em;
             }
             
-            .case {
+            .addon-card {
                 padding: 15px;
             }
             
@@ -480,7 +530,8 @@
             }
             
             .form-group input,
-            .form-group textarea {
+            .form-group textarea,
+            .form-group select {
                 padding: 10px;
             }
         }
@@ -490,153 +541,121 @@
     <!-- Header/Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Ryan Sharpnack</h1>
-            <p class="title">Professional Services Automation Specialist</p>
-            <p class="tagline">Helping Orange County Healthcare, Accounting, Insurance, and Legal Practices Save 15+ Hours/Week Through Compliant Automation Solutions</p>
+            <h1>AI Automation Solutions</h1>
+            <p class="title">Small & Medium Business Automation Specialist</p>
+            <p class="tagline">Helping Orange County Businesses Save Time, Reduce Errors, and Increase Revenue Through Intelligent Automation</p>
             <p class="phone">Phone: (657) 455-2894</p>
-            <a href="#contact" class="cta-button">Book Free Consultation</a>
+            <a href="#contact" class="cta-button">Book a Consultation</a>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section class="services" id="services">
+    <section class="services" id="packages">
         <div class="container">
-            <h2>Professional Services Automation</h2>
-            <p class="services-intro">Specialized automation solutions designed for Healthcare, Accounting, Insurance, and Legal practices. Reduce administrative burden while improving client satisfaction and regulatory compliance across all professional service verticals.</p>
+            <h2>Choose Your Package</h2>
+            <p class="services-intro">Flexible automation solutions designed to meet your business needs and help you compete with larger enterprises through intelligent technology.</p>
             
             <div class="service-packages">
                 <div class="package">
-                    <h3>Starter Package</h3>
-                    <div class="price">$3,497</div>
+                    <h3>Starter</h3>
+                    <div class="price">$497</div>
                     <ul>
-                        <li>Compliant email automation setup</li>
-                        <li>Basic workflow documentation</li>
-                        <li>One automated process implementation</li>
-                        <li>Industry compliance training for staff</li>
-                        <li>30-day technical support period</li>
+                        <li>Basic workflow automation</li>
+                        <li>Email automation setup</li>
+                        <li>CRM integration</li>
+                        <li>Initial process documentation</li>
+                        <li>30 days of support</li>
                     </ul>
+                    <button class="package-btn" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get Started</button>
+                </div>
+                
+                <div class="package featured">
+                    <span class="popular-badge">Most Popular</span>
+                    <h3>Growth</h3>
+                    <div class="price">$1,497</div>
+                    <ul>
+                        <li>Advanced workflow automation</li>
+                        <li>Multi-channel integration</li>
+                        <li>Custom AI chatbot</li>
+                        <li>Lead scoring system</li>
+                        <li>Staff training session</li>
+                        <li>60 days of support</li>
+                    </ul>
+                    <button class="package-btn" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get Started</button>
                 </div>
                 
                 <div class="package">
-                    <h3>Growth Package</h3>
-                    <div class="price">$8,997</div>
+                    <h3>Premium</h3>
+                    <div class="price">$4,997</div>
                     <ul>
-                        <li>Everything in Starter</li>
-                        <li>Client data organization & analysis</li>
-                        <li>3 automated business workflows</li>
-                        <li>Comprehensive staff training session</li>
-                        <li>Custom client communication templates</li>
-                        <li>60-day technical support period</li>
-                    </ul>
-                </div>
-                
-                <div class="package">
-                    <h3>Elite Package</h3>
-                    <div class="price">$16,997</div>
-                    <ul>
-                        <li>Everything in Growth</li>
-                        <li>Custom business dashboard creation</li>
-                        <li>5+ automated workflows with integrations</li>
+                        <li>Enterprise-grade automation</li>
+                        <li>Full system integration</li>
+                        <li>Advanced AI analytics</li>
+                        <li>Custom dashboards</li>
                         <li>Monthly optimization consultation</li>
-                        <li>Advanced reporting & analytics system</li>
-                        <li>Compliance audit and documentation</li>
-                        <li>90-day technical support period</li>
+                        <li>Priority support (90 days)</li>
                     </ul>
+                    <button class="package-btn" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get Started</button>
                 </div>
             </div>
             
-            <div style="text-align: center; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                <h3 style="color: #003366; margin-bottom: 20px;">Monthly Retainer Options</h3>
-                <p><strong>Maintenance & Optimization:</strong> $597/month</p>
-                <p><strong>Advanced Analytics & Compliance Reporting:</strong> $1,097/month</p>
-                <p><strong>Full-Service Business AI Management:</strong> $2,497/month</p>
+            <div class="retainer-section">
+                <h3>Monthly Retainer Options</h3>
+                <p style="font-style: italic; margin-bottom: 25px;">Retainers can be paired with any package for ongoing support and optimization</p>
+                <p><strong>Basic:</strong> $297/month - Essential maintenance and updates (5 hours monthly support)</p>
+                <p><strong>Growth:</strong> $697/month - Active optimization and improvements (12 hours monthly support)</p>
+                <p><strong>Premium:</strong> $1,497/month - Dedicated support and strategic consulting (25 hours monthly support)</p>
             </div>
         </div>
     </section>
 
-    <!-- Case Studies Section -->
-    <section class="case-studies" id="case-studies">
+    <!-- Add-Ons Section -->
+    <section class="addons" id="addons">
         <div class="container">
-            <h2>Client Success Stories</h2>
-            <div class="cases">
-                <div class="case">
-                    <h3>Family Medicine Practice</h3>
-                    <div class="problem">
-                        <span class="label">Challenge:</span> Practice was spending 3-4 hours daily on manual appointment confirmations and patient follow-ups, with high no-show rates and staff burnout.
-                    </div>
-                    <div class="solution">
-                        <span class="label">Solution:</span> Implemented HIPAA-compliant automated appointment reminders, patient follow-up systems, and chronic care coordination workflows.
-                    </div>
-                    <div class="results">
-                        <span class="label">Results:</span> Reduced administrative overhead by 52%, decreased no-show rates by 36%, and improved patient satisfaction scores by 34%.
-                    </div>
-                </div>
-
-                <div class="case">
-                    <h3>Dental Practice</h3>
-                    <div class="problem">
-                        <span class="label">Challenge:</span> 3-dentist practice was losing $8,000 monthly to no-shows and spending 4 hours daily on appointment confirmations, insurance verification, and recall campaigns.
-                    </div>
-                    <div class="solution">
-                        <span class="label">Solution:</span> Implemented HIPAA-compliant automated appointment reminders, real-time insurance verification, AI-powered recall campaigns, and treatment plan follow-up sequences.
-                    </div>
-                    <div class="results">
-                        <span class="label">Results:</span> Reduced no-show rate by 64%, eliminated 18 hours/week of manual tasks, increased recall compliance by 47%, and generated $12,000 additional monthly revenue.
-                    </div>
+            <h2>Powerful Add-Ons</h2>
+            <p class="addons-intro">Enhance your package with specialized features designed for maximum impact in the Orange County market.</p>
+            <div class="addons-grid">
+                <div class="addon-card">
+                    <h3>Personalized Email Campaigns</h3>
+                    <div class="price">$197/mo</div>
+                    <p>Automated email sequences tailored to customer behavior and preferences to boost engagement and conversions.</p>
+                    <button class="package-btn" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Add This Feature</button>
                 </div>
                 
-                <div class="case">
-                    <h3>CPA Firm</h3>
-                    <div class="problem">
-                        <span class="label">Challenge:</span> Tax season overwhelmed staff with manual client intake, document collection, and status updates, creating bottlenecks and client frustration.
-                    </div>
-                    <div class="solution">
-                        <span class="label">Solution:</span> Automated client onboarding workflows, document collection portals, and progress notification systems with QuickBooks integration.
-                    </div>
-                    <div class="results">
-                        <span class="label">Results:</span> Reduced client onboarding time by 68%, eliminated 15 hours/week of manual data entry, and increased client capacity by 40%.
-                    </div>
+                <div class="addon-card">
+                    <h3>Advanced Lead Scoring</h3>
+                    <div class="price">$247/mo</div>
+                    <p>AI-powered lead qualification that automatically prioritizes your best prospects for maximum ROI.</p>
+                    <button class="package-btn" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Add This Feature</button>
                 </div>
                 
-                <div class="case">
-                    <h3>Insurance Agency</h3>
-                    <div class="problem">
-                        <span class="label">Challenge:</span> Policy renewal reminders and claims follow-ups were consuming 20+ hours weekly, with missed renewals affecting client retention.
-                    </div>
-                    <div class="solution">
-                        <span class="label">Solution:</span> Implemented automated policy renewal campaigns, claims status tracking, and personalized client communication workflows.
-                    </div>
-                    <div class="results">
-                        <span class="label">Results:</span> Improved policy renewal rates by 43%, reduced manual follow-up time by 75%, and increased overall client retention by 28%.
-                    </div>
+                <div class="addon-card">
+                    <h3>Social Media Content Automation</h3>
+                    <div class="price">$177/mo</div>
+                    <p>Schedule and publish engaging content across all your social platforms consistently and professionally.</p>
+                    <button class="package-btn" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Add This Feature</button>
                 </div>
                 
-                <div class="case">
-                    <h3>Law Firm</h3>
-                    <div class="problem">
-                        <span class="label">Challenge:</span> Client intake and case status communication required constant manual updates, delaying billable work and frustrating clients.
-                    </div>
-                    <div class="solution">
-                        <span class="label">Solution:</span> Streamlined client intake automation, case milestone notifications, and automated billing reminders with legal practice management integration.
-                    </div>
-                    <div class="results">
-                        <span class="label">Results:</span> Decreased client intake processing by 55%, improved case communication efficiency by 60%, and increased billable hours by 12%.
-                    </div>
+                <div class="addon-card">
+                    <h3>Analytics Dashboard</h3>
+                    <div class="price">$297 setup + $127/mo</div>
+                    <p>Custom dashboard with real-time insights and KPI tracking for data-driven business decisions.</p>
+                    <button class="package-btn" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Add This Feature</button>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <h2>About</h2>
-            <div class="about-content">
-                <p>Experienced IT infrastructure specialist who transitioned to professional services automation, combining 4+ years of technical consulting expertise with specialized compliance-focused workflow solutions for Orange County healthcare, accounting, insurance, and legal practices.</p>
                 
-                <p style="margin: 20px 0;">Technical foundation includes AWS certification, cloud migrations, and enterprise infrastructure management across Orange County's professional services market. Currently focused on developing industry-compliant automation solutions that integrate practice management software with communication platforms, billing systems, and client engagement tools.</p>
+                <div class="addon-card">
+                    <h3>Customer Retention Insights</h3>
+                    <div class="price">$247/mo</div>
+                    <p>Predictive analytics to identify at-risk customers and improve retention rates through proactive engagement.</p>
+                    <button class="package-btn" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Add This Feature</button>
+                </div>
                 
-                <p>Specialized in delivering ROI within 30 days through systematic process optimization while maintaining full regulatory compliance across healthcare (HIPAA), financial services, and legal industry requirements. Currently serving independent professional service practices throughout Orange County.</p>
+                <div class="addon-card">
+                    <h3>Chatbot / Virtual Assistant</h3>
+                    <div class="price">$197/mo</div>
+                    <p>24/7 AI-powered customer support that handles inquiries and qualifies leads automatically.</p>
+                    <button class="package-btn" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Add This Feature</button>
+                </div>
             </div>
         </div>
     </section>
@@ -644,19 +663,19 @@
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
-            <h2>Get Your Free Consultation</h2>
+            <h2>Get Started Today</h2>
             <div class="contact-content">
                 <div class="contact-info">
                     <h3>Contact Information</h3>
                     <p><strong>Phone:</strong> (657) 455-2894</p>
                     <p><strong>Email:</strong> sharpsmbadvisory@outlook.com</p>
-                    <p><strong>Service Area:</strong> Orange County Professional Services</p>
-                    <p style="margin-top: 20px;">Compliance-trained consultant ready to optimize your practice operations with industry-specific automation solutions.</p>
+                    <p><strong>Service Area:</strong> Orange County, CA</p>
+                    <p style="margin-top: 20px;">Ready to automate your business and unlock new growth opportunities? Schedule your free consultation today.</p>
                 </div>
                 
                 <div class="contact-form">
-                    <h3>Schedule Your Free Consultation</h3>
-                    <form action="https://formspree.io/f/xgvnypgk" method="POST" target="_blank">
+                    <h3>Book Your Consultation</h3>
+                    <form action="https://formspree.io/f/xgvnypgk" method="POST">
                         <div class="form-group">
                             <label for="name">Business Name / Your Name *</label>
                             <input type="text" id="name" name="name" required>
@@ -674,15 +693,15 @@
                         
                         <div class="form-group">
                             <label for="business-type">Business Type</label>
-                            <input type="text" id="business-type" name="business-type" placeholder="e.g., Healthcare, Accounting, Insurance, Legal">
+                            <input type="text" id="business-type" name="business-type" placeholder="e.g., Real Estate, E-commerce, Retail">
                         </div>
                         
                         <div class="form-group">
-                            <label for="message">What administrative challenges are you facing? *</label>
-                            <textarea id="message" name="message" required placeholder="Describe your biggest time-consuming administrative tasks..."></textarea>
+                            <label for="message">What challenges are you facing? *</label>
+                            <textarea id="message" name="message" required placeholder="Tell us about your biggest time-consuming tasks or automation needs..."></textarea>
                         </div>
                         
-                        <button type="submit" class="submit-btn">Request Free Consultation</button>
+                        <button type="submit" class="submit-btn">Book a Consultation</button>
                     </form>
                 </div>
             </div>
@@ -693,12 +712,13 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-links">
-                <a href="https://www.linkedin.com/in/ryansharpnack" target="_blank">LinkedIn</a>
-                <a href="#contact">Free Consultation</a>
+                <a href="#packages">Packages</a>
+                <a href="#addons">Add-Ons</a>
+                <a href="#contact">Contact</a>
                 <a href="tel:6574552894">Call Now</a>
             </div>
-            <p>&copy; 2025 Ryan Sharpnack Professional Services Automation. All rights reserved.</p>
-            <p style="font-size: 0.9em; margin-top: 10px;">Compliance-Focused Solutions for Orange County Healthcare, Accounting, Insurance & Legal Practices</p>
+            <p>&copy; 2025 Ryan Sharpnack. All rights reserved.</p>
+            <p style="font-size: 0.9em; margin-top: 10px;">AI-Powered Automation Solutions for Orange County Businesses</p>
         </div>
     </footer>
 
@@ -707,20 +727,14 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
             });
         });
-        
-        // Form submission handling
-        const form = document.querySelector('form');
-        if (form) {
-            form.addEventListener('submit', function(e) {
-                // You can add form validation here if needed
-                console.log('Form submitted');
-            });
-        }
     </script>
 </body>
 </html>
