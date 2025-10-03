@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryan Sharpnack - Professional Services Automation Specialist</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header/Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #003366 0%, #2d5f8f 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .hero .title {
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            color: #e0e0e0;
+        }
+        
+        .hero .tagline {
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero .phone {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: #ff6b35;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: #e55a2b;
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 60px 0;
+            background-color: #f8f9fa;
+        }
+        
+        .services h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2.2em;
+            color: #003366;
+        }
+        
+        .services-intro {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 1.1em;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .service-packages {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .package {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .package h3 {
+            color: #003366;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        
+        .package .price {
+            font-size: 2em;
+            color: #ff6b35;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .package ul {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        
+        .package ul li {
+            margin-bottom: 8px;
+            list-style: none;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .package ul li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: bold;
+        }
+        
+        /* Case Studies Section */
+        .case-studies {
+            padding: 60px 0;
+        }
+        
+        .case-studies h2 {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.2em;
+            color: #003366;
+        }
+        
+        .cases {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+        
+        .case {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 5px solid #003366;
+        }
+        
+        .case h3 {
+            color: #003366;
+            margin-bottom: 15px;
+        }
+        
+        .case .problem,
+        .case .solution,
+        .case .results {
+            margin-bottom: 15px;
+        }
+        
+        .case .label {
+            font-weight: bold;
+            color: #ff6b35;
+        }
+        
+        .case .results {
+            background: #e8f5e8;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 3px solid #28a745;
+        }
+        
+        /* About Section */
+        .about {
+            padding: 60px 0;
+            background-color: #f8f9fa;
+        }
+        
+        .about h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.2em;
+            color: #003366;
+        }
+        
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1em;
+            text-align: center;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 60px 0;
+            background-color: #003366;
+            color: white;
+        }
+        
+        .contact h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.2em;
+        }
+        
+        .contact-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+            align-items: start;
+        }
+        
+        .contact-info {
+            text-align: center;
+        }
+        
+        .contact-info h3 {
+            margin-bottom: 20px;
+            color: #ff6b35;
+        }
+        
+        .contact-info p {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .contact-form {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 8px;
+        }
+        
+        .contact-form h3 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background-color: #ff6b35;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            width: 100%;
+        }
+        
+        .submit-btn:hover {
+            background-color: #e55a2b;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        .footer-links {
+            margin-bottom: 20px;
+        }
+        
+        .footer-links a {
+            color: #ff6b35;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 60px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2em;
+            }
+            
+            .hero .title {
+                font-size: 1.1em;
+            }
+            
+            .hero .tagline {
+                font-size: 1em;
+                padding: 0 10px;
+            }
+            
+            .hero .phone {
+                font-size: 1.1em;
+            }
+            
+            .service-packages,
+            .cases,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 0 15px;
+            }
+            
+            .services,
+            .case-studies,
+            .about,
+            .contact {
+                padding: 40px 0;
+            }
+            
+            .services h2,
+            .case-studies h2,
+            .about h2,
+            .contact h2 {
+                font-size: 1.8em;
+            }
+            
+            .package {
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+            
+            .package .price {
+                font-size: 1.6em;
+            }
+            
+            .case {
+                padding: 20px;
+            }
+            
+            .contact-content {
+                gap: 30px;
+            }
+            
+            .contact-form {
+                padding: 20px;
+            }
+            
+            .form-group {
+                margin-bottom: 15px;
+            }
+            
+            .form-group input,
+            .form-group textarea {
+                padding: 12px;
+                font-size: 16px;
+            }
+            
+            .submit-btn {
+                padding: 15px 20px;
+                font-size: 1em;
+            }
+        }
+        
+        /* Tablet Responsive */
+        @media (max-width: 1024px) and (min-width: 769px) {
+            .hero {
+                padding: 70px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.2em;
+            }
+            
+            .hero .tagline {
+                font-size: 1.05em;
+            }
+            
+            .service-packages {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .cases {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .package {
+                padding: 25px;
+            }
+            
+            .case {
+                padding: 25px;
+            }
+        }
+        
+        /* Small Mobile Responsive */
+        @media (max-width: 480px) {
+            .hero {
+                padding: 50px 0;
+            }
+            
+            .hero h1 {
+                font-size: 1.8em;
+            }
+            
+            .hero .title {
+                font-size: 1em;
+            }
+            
+            .hero .tagline {
+                font-size: 0.9em;
+                padding: 0 15px;
+            }
+            
+            .cta-button {
+                padding: 12px 25px;
+                font-size: 1em;
+            }
+            
+            .container {
+                padding: 0 10px;
+            }
+            
+            .package {
+                padding: 15px;
+            }
+            
+            .package .price {
+                font-size: 1.4em;
+            }
+            
+            .case {
+                padding: 15px;
+            }
+            
+            .contact-form {
+                padding: 15px;
+            }
+            
+            .form-group input,
+            .form-group textarea {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Ryan Sharpnack</h1>
+            <p class="title">Professional Services Automation Specialist</p>
+            <p class="tagline">Helping Orange County Healthcare, Accounting, Insurance, and Legal Practices Save 15+ Hours/Week Through Compliant Automation Solutions</p>
+            <p class="phone">Phone: (657) 455-2894</p>
+            <a href="#contact" class="cta-button">Book Free Consultation</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2>Professional Services Automation</h2>
+            <p class="services-intro">Specialized automation solutions designed for Healthcare, Accounting, Insurance, and Legal practices. Reduce administrative burden while improving client satisfaction and regulatory compliance across all professional service verticals.</p>
+            
+            <div class="service-packages">
+                <div class="package">
+                    <h3>Starter Package</h3>
+                    <div class="price">$3,497</div>
+                    <ul>
+                        <li>Compliant email automation setup</li>
+                        <li>Basic workflow documentation</li>
+                        <li>One automated process implementation</li>
+                        <li>Industry compliance training for staff</li>
+                        <li>30-day technical support period</li>
+                    </ul>
+                </div>
+                
+                <div class="package">
+                    <h3>Growth Package</h3>
+                    <div class="price">$8,997</div>
+                    <ul>
+                        <li>Everything in Starter</li>
+                        <li>Client data organization & analysis</li>
+                        <li>3 automated business workflows</li>
+                        <li>Comprehensive staff training session</li>
+                        <li>Custom client communication templates</li>
+                        <li>60-day technical support period</li>
+                    </ul>
+                </div>
+                
+                <div class="package">
+                    <h3>Elite Package</h3>
+                    <div class="price">$16,997</div>
+                    <ul>
+                        <li>Everything in Growth</li>
+                        <li>Custom business dashboard creation</li>
+                        <li>5+ automated workflows with integrations</li>
+                        <li>Monthly optimization consultation</li>
+                        <li>Advanced reporting & analytics system</li>
+                        <li>Compliance audit and documentation</li>
+                        <li>90-day technical support period</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="text-align: center; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                <h3 style="color: #003366; margin-bottom: 20px;">Monthly Retainer Options</h3>
+                <p><strong>Maintenance & Optimization:</strong> $597/month</p>
+                <p><strong>Advanced Analytics & Compliance Reporting:</strong> $1,097/month</p>
+                <p><strong>Full-Service Business AI Management:</strong> $2,497/month</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section class="case-studies" id="case-studies">
+        <div class="container">
+            <h2>Client Success Stories</h2>
+            <div class="cases">
+                <div class="case">
+                    <h3>Family Medicine Practice</h3>
+                    <div class="problem">
+                        <span class="label">Challenge:</span> Practice was spending 3-4 hours daily on manual appointment confirmations and patient follow-ups, with high no-show rates and staff burnout.
+                    </div>
+                    <div class="solution">
+                        <span class="label">Solution:</span> Implemented HIPAA-compliant automated appointment reminders, patient follow-up systems, and chronic care coordination workflows.
+                    </div>
+                    <div class="results">
+                        <span class="label">Results:</span> Reduced administrative overhead by 52%, decreased no-show rates by 36%, and improved patient satisfaction scores by 34%.
+                    </div>
+                </div>
+
+                <div class="case">
+                    <h3>Dental Practice</h3>
+                    <div class="problem">
+                        <span class="label">Challenge:</span> 3-dentist practice was losing $8,000 monthly to no-shows and spending 4 hours daily on appointment confirmations, insurance verification, and recall campaigns.
+                    </div>
+                    <div class="solution">
+                        <span class="label">Solution:</span> Implemented HIPAA-compliant automated appointment reminders, real-time insurance verification, AI-powered recall campaigns, and treatment plan follow-up sequences.
+                    </div>
+                    <div class="results">
+                        <span class="label">Results:</span> Reduced no-show rate by 64%, eliminated 18 hours/week of manual tasks, increased recall compliance by 47%, and generated $12,000 additional monthly revenue.
+                    </div>
+                </div>
+                
+                <div class="case">
+                    <h3>CPA Firm</h3>
+                    <div class="problem">
+                        <span class="label">Challenge:</span> Tax season overwhelmed staff with manual client intake, document collection, and status updates, creating bottlenecks and client frustration.
+                    </div>
+                    <div class="solution">
+                        <span class="label">Solution:</span> Automated client onboarding workflows, document collection portals, and progress notification systems with QuickBooks integration.
+                    </div>
+                    <div class="results">
+                        <span class="label">Results:</span> Reduced client onboarding time by 68%, eliminated 15 hours/week of manual data entry, and increased client capacity by 40%.
+                    </div>
+                </div>
+                
+                <div class="case">
+                    <h3>Insurance Agency</h3>
+                    <div class="problem">
+                        <span class="label">Challenge:</span> Policy renewal reminders and claims follow-ups were consuming 20+ hours weekly, with missed renewals affecting client retention.
+                    </div>
+                    <div class="solution">
+                        <span class="label">Solution:</span> Implemented automated policy renewal campaigns, claims status tracking, and personalized client communication workflows.
+                    </div>
+                    <div class="results">
+                        <span class="label">Results:</span> Improved policy renewal rates by 43%, reduced manual follow-up time by 75%, and increased overall client retention by 28%.
+                    </div>
+                </div>
+                
+                <div class="case">
+                    <h3>Law Firm</h3>
+                    <div class="problem">
+                        <span class="label">Challenge:</span> Client intake and case status communication required constant manual updates, delaying billable work and frustrating clients.
+                    </div>
+                    <div class="solution">
+                        <span class="label">Solution:</span> Streamlined client intake automation, case milestone notifications, and automated billing reminders with legal practice management integration.
+                    </div>
+                    <div class="results">
+                        <span class="label">Results:</span> Decreased client intake processing by 55%, improved case communication efficiency by 60%, and increased billable hours by 12%.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2>About</h2>
+            <div class="about-content">
+                <p>Experienced IT infrastructure specialist who transitioned to professional services automation, combining 4+ years of technical consulting expertise with specialized compliance-focused workflow solutions for Orange County healthcare, accounting, insurance, and legal practices.</p>
+                
+                <p style="margin: 20px 0;">Technical foundation includes AWS certification, cloud migrations, and enterprise infrastructure management across Orange County's professional services market. Currently focused on developing industry-compliant automation solutions that integrate practice management software with communication platforms, billing systems, and client engagement tools.</p>
+                
+                <p>Specialized in delivering ROI within 30 days through systematic process optimization while maintaining full regulatory compliance across healthcare (HIPAA), financial services, and legal industry requirements. Currently serving independent professional service practices throughout Orange County.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Get Your Free Consultation</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p><strong>Phone:</strong> (657) 455-2894</p>
+                    <p><strong>Email:</strong> sharpsmbadvisory@outlook.com</p>
+                    <p><strong>Service Area:</strong> Orange County Professional Services</p>
+                    <p style="margin-top: 20px;">Compliance-trained consultant ready to optimize your practice operations with industry-specific automation solutions.</p>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Schedule Your Free Consultation</h3>
+                    <form action="https://formspree.io/f/xgvnypgk" method="POST" target="_blank">
+                        <div class="form-group">
+                            <label for="name">Business Name / Your Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="business-type">Business Type</label>
+                            <input type="text" id="business-type" name="business-type" placeholder="e.g., Healthcare, Accounting, Insurance, Legal">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">What administrative challenges are you facing? *</label>
+                            <textarea id="message" name="message" required placeholder="Describe your biggest time-consuming administrative tasks..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Request Free Consultation</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/ryansharpnack" target="_blank">LinkedIn</a>
+                <a href="#contact">Free Consultation</a>
+                <a href="tel:6574552894">Call Now</a>
+            </div>
+            <p>&copy; 2025 Ryan Sharpnack Professional Services Automation. All rights reserved.</p>
+            <p style="font-size: 0.9em; margin-top: 10px;">Compliance-Focused Solutions for Orange County Healthcare, Accounting, Insurance & Legal Practices</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Form submission handling
+        const form = document.querySelector('form');
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                // You can add form validation here if needed
+                console.log('Form submitted');
+            });
+        }
+    </script>
+</body>
+</html>
