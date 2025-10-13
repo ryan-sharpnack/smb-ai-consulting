@@ -9,8 +9,8 @@ This website presents flexible automation packages, monthly retainers, and speci
 ## Services Offered
 
 ### Core Packages
-- **Starter** - $497: Basic workflow automation and CRM integration
-- **Growth** - $1,497: Advanced automation with AI chatbot and lead scoring
+- **Starter** - $997: Basic workflow automation and CRM integration
+- **Growth** - $2,497: Advanced automation with AI chatbot and lead scoring
 - **Premium** - $4,997: Enterprise-grade automation with custom dashboards
 
 ### Monthly Retainers
