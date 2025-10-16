@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Solutions for Women-Owned Businesses | Sharpnack AI</title>
+    <title>AI Automation for Service Businesses | Sharpnack AI Solutions</title>
     <style>
         * {
             margin: 0;
@@ -25,87 +25,117 @@
         
         /* Header/Hero Section */
         .hero {
-            background: linear-gradient(135deg, #6B46C1 0%, #9F7AEA 100%);
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
             color: white;
             padding: 100px 0 80px 0;
             text-align: center;
         }
         
         .hero h1 {
-            font-size: 2.8em;
-            margin-bottom: 15px;
+            font-size: 3em;
+            margin-bottom: 20px;
             font-weight: 700;
             line-height: 1.2;
         }
         
-        .hero .subtitle {
-            font-size: 1.4em;
-            margin-bottom: 25px;
-            color: #F3E8FF;
-            font-weight: 300;
-        }
-        
         .hero .tagline {
-            font-size: 1.2em;
-            margin-bottom: 35px;
-            max-width: 700px;
+            font-size: 1.3em;
+            margin-bottom: 40px;
+            max-width: 750px;
             margin-left: auto;
             margin-right: auto;
-            line-height: 1.6;
+            line-height: 1.7;
         }
         
         .hero .phone {
-            font-size: 1.3em;
-            margin-bottom: 30px;
-            font-weight: 500;
+            font-size: 1.4em;
+            margin-bottom: 35px;
+            font-weight: 600;
         }
         
         .cta-button {
             display: inline-block;
-            background-color: #F59E0B;
+            background-color: #f59e0b;
             color: white;
-            padding: 18px 40px;
+            padding: 20px 45px;
             text-decoration: none;
             border-radius: 8px;
-            font-size: 1.15em;
+            font-size: 1.2em;
             font-weight: 600;
             transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
         }
         
         .cta-button:hover {
-            background-color: #D97706;
+            background-color: #d97706;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.5);
         }
 
-        /* Trust Bar */
-        .trust-bar {
-            background: #F9FAFB;
-            padding: 30px 0;
+        /* Quiz Section */
+        .quiz {
+            background: #f9fafb;
+            padding: 70px 0;
+        }
+
+        .quiz h2 {
             text-align: center;
-            border-bottom: 1px solid #E5E7EB;
-        }
-
-        .trust-bar p {
-            font-size: 1.1em;
-            color: #6B7280;
             margin-bottom: 15px;
-            font-weight: 500;
+            font-size: 2.5em;
+            color: #1e3a8a;
+            font-weight: 700;
         }
 
-        .trust-icons {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            flex-wrap: wrap;
-            margin-top: 20px;
+        .quiz-intro {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 1.2em;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #4b5563;
         }
 
-        .trust-item {
-            font-size: 0.95em;
-            color: #4B5563;
-            font-weight: 500;
+        .quiz-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .quiz-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 5px solid #3b82f6;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+
+        .quiz-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.15);
+        }
+
+        .quiz-card h3 {
+            color: #1e3a8a;
+            margin-bottom: 12px;
+            font-size: 1.3em;
+        }
+
+        .quiz-card p {
+            color: #6b7280;
+            font-size: 1.05em;
+            line-height: 1.6;
+        }
+
+        .quiz-cta {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 1.15em;
+            color: #1e3a8a;
+            font-weight: 600;
         }
         
         /* Industries Section */
@@ -118,7 +148,7 @@
             text-align: center;
             margin-bottom: 20px;
             font-size: 2.4em;
-            color: #6B46C1;
+            color: #1e3a8a;
             font-weight: 700;
         }
 
@@ -129,7 +159,7 @@
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
-            color: #4B5563;
+            color: #4b5563;
             line-height: 1.7;
         }
 
@@ -141,7 +171,7 @@
         }
 
         .industry-card {
-            background: linear-gradient(135deg, #F9FAFB 0%, #F3F4F6 100%);
+            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
             padding: 35px;
             border-radius: 12px;
             text-align: center;
@@ -151,8 +181,8 @@
 
         .industry-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(107, 70, 193, 0.15);
-            border-color: #9F7AEA;
+            box-shadow: 0 10px 30px rgba(30, 58, 138, 0.15);
+            border-color: #3b82f6;
         }
 
         .industry-icon {
@@ -161,185 +191,96 @@
         }
 
         .industry-card h3 {
-            color: #6B46C1;
+            color: #1e3a8a;
             margin-bottom: 15px;
             font-size: 1.4em;
             font-weight: 600;
         }
 
         .industry-card p {
-            color: #6B7280;
+            color: #6b7280;
             font-size: 1em;
             line-height: 1.6;
         }
-        
-        /* Services Section */
-        .services {
+
+        /* How It Works Section */
+        .how-it-works {
             padding: 70px 0;
-            background: linear-gradient(to bottom, #F9FAFB 0%, white 100%);
+            background: linear-gradient(to bottom, #f9fafb 0%, white 100%);
         }
-        
-        .services h2 {
+
+        .how-it-works h2 {
             text-align: center;
             margin-bottom: 20px;
             font-size: 2.4em;
-            color: #6B46C1;
+            color: #1e3a8a;
             font-weight: 700;
         }
-        
-        .services-intro {
+
+        .how-intro {
             text-align: center;
             margin-bottom: 50px;
             font-size: 1.15em;
-            max-width: 800px;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
-            color: #4B5563;
+            color: #4b5563;
             line-height: 1.7;
         }
-        
-        .service-packages {
+
+        .steps {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
-            margin-bottom: 50px;
+            max-width: 1000px;
+            margin: 0 auto;
         }
-        
-        .package {
-            background: white;
-            padding: 40px 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+
+        .step {
             text-align: center;
-            position: relative;
-            border: 2px solid #E5E7EB;
-            transition: all 0.3s;
+            padding: 30px;
         }
 
-        .package:hover {
-            border-color: #9F7AEA;
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(107, 70, 193, 0.15);
-        }
-
-        .package.featured {
-            border: 3px solid #F59E0B;
-            background: linear-gradient(to bottom, #FFFBEB 0%, white 100%);
-        }
-
-        .popular-badge {
-            position: absolute;
-            top: -15px;
-            right: 20px;
-            background: #F59E0B;
+        .step-number {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #3b82f6 0%, #1e3a8a 100%);
             color: white;
-            padding: 8px 20px;
-            border-radius: 25px;
-            font-size: 0.9em;
-            font-weight: 600;
-            box-shadow: 0 4px 10px rgba(245, 158, 11, 0.3);
+            border-radius: 50%;
+            line-height: 60px;
+            font-size: 1.8em;
+            font-weight: 700;
+            margin-bottom: 20px;
         }
-        
-        .package h3 {
-            color: #6B46C1;
+
+        .step h3 {
+            color: #1e3a8a;
             margin-bottom: 15px;
-            font-size: 1.6em;
-            font-weight: 700;
-        }
-        
-        .package .price {
-            font-size: 2.2em;
-            color: #F59E0B;
-            font-weight: 700;
-            margin-bottom: 25px;
-        }
-        
-        .package ul {
-            text-align: left;
-            margin-bottom: 30px;
-        }
-        
-        .package ul li {
-            margin-bottom: 12px;
-            list-style: none;
-            padding-left: 30px;
-            position: relative;
-            color: #4B5563;
-            font-size: 1.05em;
-        }
-        
-        .package ul li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #10B981;
-            font-weight: bold;
             font-size: 1.3em;
         }
 
-        .package-btn {
-            background: linear-gradient(135deg, #6B46C1 0%, #9F7AEA 100%);
-            color: white;
-            padding: 14px 35px;
-            border: none;
-            border-radius: 8px;
+        .step p {
+            color: #6b7280;
             font-size: 1.05em;
-            cursor: pointer;
-            width: 100%;
-            font-weight: 600;
-            transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(107, 70, 193, 0.2);
+            line-height: 1.6;
         }
 
-        .package-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(107, 70, 193, 0.3);
-        }
-
-        .retainer-section {
-            text-align: center;
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            margin-top: 40px;
-            border: 2px solid #E5E7EB;
-        }
-
-        .retainer-section h3 {
-            color: #6B46C1;
-            margin-bottom: 25px;
-            font-size: 1.9em;
-            font-weight: 700;
-        }
-
-        .retainer-section p {
-            margin-bottom: 18px;
-            font-size: 1.1em;
-            color: #4B5563;
-        }
-
-        .retainer-section p strong {
-            color: #F59E0B;
-            font-size: 1.15em;
-            font-weight: 600;
-        }
-
-        /* Problems Section */
-        .problems {
+        /* Results Section */
+        .results {
             padding: 70px 0;
-            background: linear-gradient(135deg, #6B46C1 0%, #9F7AEA 100%);
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
             color: white;
         }
 
-        .problems h2 {
+        .results h2 {
             text-align: center;
             margin-bottom: 20px;
             font-size: 2.4em;
             font-weight: 700;
         }
 
-        .problems-intro {
+        .results-intro {
             text-align: center;
             margin-bottom: 50px;
             font-size: 1.15em;
@@ -349,34 +290,40 @@
             line-height: 1.7;
         }
 
-        .problems-grid {
+        .results-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
         }
 
-        .problem-card {
+        .result-card {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
             padding: 30px;
             border-radius: 12px;
             border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
             transition: all 0.3s;
         }
 
-        .problem-card:hover {
+        .result-card:hover {
             background: rgba(255, 255, 255, 0.15);
             transform: translateY(-5px);
         }
 
-        .problem-card h3 {
-            color: #FDE68A;
-            margin-bottom: 15px;
-            font-size: 1.3em;
-            font-weight: 600;
+        .result-stat {
+            font-size: 3em;
+            font-weight: 700;
+            color: #fbbf24;
+            margin-bottom: 10px;
         }
 
-        .problem-card p {
+        .result-card h3 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+
+        .result-card p {
             font-size: 1.05em;
             line-height: 1.6;
         }
@@ -391,7 +338,7 @@
             text-align: center;
             margin-bottom: 20px;
             font-size: 2.4em;
-            color: #6B46C1;
+            color: #1e3a8a;
             font-weight: 700;
         }
 
@@ -402,7 +349,7 @@
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
-            color: #4B5563;
+            color: #4b5563;
             line-height: 1.7;
         }
         
@@ -420,7 +367,7 @@
         
         .contact-info h3 {
             margin-bottom: 25px;
-            color: #6B46C1;
+            color: #1e3a8a;
             font-size: 1.6em;
             font-weight: 700;
         }
@@ -428,16 +375,16 @@
         .contact-info p {
             margin-bottom: 15px;
             font-size: 1.1em;
-            color: #4B5563;
+            color: #4b5563;
         }
 
         .contact-info p strong {
-            color: #6B46C1;
+            color: #1e3a8a;
             font-weight: 600;
         }
         
         .contact-form {
-            background: linear-gradient(135deg, #F9FAFB 0%, #F3F4F6 100%);
+            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
             padding: 40px;
             border-radius: 12px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.08);
@@ -446,7 +393,7 @@
         .contact-form h3 {
             margin-bottom: 25px;
             text-align: center;
-            color: #6B46C1;
+            color: #1e3a8a;
             font-size: 1.6em;
             font-weight: 700;
         }
@@ -458,7 +405,7 @@
         .form-group label {
             display: block;
             margin-bottom: 8px;
-            color: #4B5563;
+            color: #4b5563;
             font-weight: 500;
             font-size: 1.05em;
         }
@@ -468,7 +415,7 @@
         .form-group select {
             width: 100%;
             padding: 14px;
-            border: 2px solid #E5E7EB;
+            border: 2px solid #e5e7eb;
             border-radius: 8px;
             font-size: 16px;
             transition: all 0.3s;
@@ -479,8 +426,8 @@
         .form-group textarea:focus,
         .form-group select:focus {
             outline: none;
-            border-color: #9F7AEA;
-            box-shadow: 0 0 0 3px rgba(159, 122, 234, 0.1);
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
         }
         
         .form-group textarea {
@@ -489,7 +436,7 @@
         }
         
         .submit-btn {
-            background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
             color: white;
             padding: 16px 35px;
             border: none;
@@ -509,7 +456,7 @@
         
         /* Footer */
         .footer {
-            background-color: #1F2937;
+            background-color: #1f2937;
             color: white;
             padding: 40px 0;
             text-align: center;
@@ -520,7 +467,7 @@
         }
         
         .footer-links a {
-            color: #F59E0B;
+            color: #f59e0b;
             text-decoration: none;
             margin: 0 20px;
             font-weight: 500;
@@ -528,11 +475,11 @@
         }
         
         .footer-links a:hover {
-            color: #FDE68A;
+            color: #fbbf24;
         }
 
         .footer p {
-            color: #D1D5DB;
+            color: #d1d5db;
         }
         
         /* Mobile Responsive */
@@ -542,36 +489,26 @@
             }
             
             .hero h1 {
-                font-size: 2em;
-            }
-            
-            .hero .subtitle {
-                font-size: 1.15em;
+                font-size: 2.2em;
             }
             
             .hero .tagline {
-                font-size: 1.05em;
+                font-size: 1.1em;
                 padding: 0 10px;
             }
             
             .industries-grid,
-            .service-packages,
-            .problems-grid,
+            .quiz-grid,
+            .steps,
+            .results-grid,
             .contact-content {
                 grid-template-columns: 1fr;
             }
             
-            .package {
-                padding: 30px 20px;
-            }
-
-            .trust-icons {
-                gap: 20px;
-            }
-            
-            .services h2,
+            .quiz h2,
             .industries h2,
-            .problems h2,
+            .how-it-works h2,
+            .results h2,
             .contact h2 {
                 font-size: 1.9em;
             }
@@ -582,25 +519,52 @@
     <!-- Header/Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>AI Solutions Built for<br>Women-Owned Businesses</h1>
-            <p class="subtitle">Helping MedSpas, Salons, Fitness Studios & More Thrive</p>
-            <p class="tagline">Stop losing revenue to no-shows, abandoned leads, and manual follow-ups. Let AI handle the busy work while you focus on what you do best—serving your clients.</p>
+            <h1>Stop Losing Revenue to Manual Processes</h1>
+            <p class="tagline">AI automation for service businesses that eliminates no-shows, recovers lost leads, and brings customers back—automatically.</p>
             <p class="phone">📞 (657) 455-2894</p>
-            <a href="#contact" class="cta-button">Schedule Your Free Consultation</a>
+            <a href="#contact" class="cta-button">Book a Free 15-Minute Call</a>
         </div>
     </section>
 
-    <!-- Trust Bar -->
-    <section class="trust-bar">
+    <!-- Quiz Section -->
+    <section class="quiz">
         <div class="container">
-            <p>Trusted by Women Business Owners Nationwide</p>
-            <div class="trust-icons">
-                <span class="trust-item">💜 MedSpas & Aesthetics</span>
-                <span class="trust-item">💇‍♀️ Salons & Beauty</span>
-                <span class="trust-item">💪 Fitness Studios</span>
-                <span class="trust-item">📸 Photography</span>
-                <span class="trust-item">👶 Childcare</span>
+            <h2>Is This You?</h2>
+            <p class="quiz-intro">If you're nodding your head to any of these, we should talk.</p>
+            
+            <div class="quiz-grid">
+                <div class="quiz-card">
+                    <h3>📅 No-Shows Are Killing You</h3>
+                    <p>Empty appointment slots cost you hundreds or thousands per week in lost revenue.</p>
+                </div>
+                
+                <div class="quiz-card">
+                    <h3>📧 Leads Go Unanswered</h3>
+                    <p>You're busy with clients and by the time you follow up, they've booked with someone else.</p>
+                </div>
+                
+                <div class="quiz-card">
+                    <h3>🔁 Customers Don't Return</h3>
+                    <p>People love your service but forget to rebook. You have no systematic way to bring them back.</p>
+                </div>
+                
+                <div class="quiz-card">
+                    <h3>⏰ Drowning in Admin Work</h3>
+                    <p>Your day is consumed by emails, calls, and scheduling. There's no time left to grow the business.</p>
+                </div>
+                
+                <div class="quiz-card">
+                    <h3>⭐ Reviews Never Happen</h3>
+                    <p>Asking for reviews feels awkward. Most happy clients leave without leaving feedback.</p>
+                </div>
+                
+                <div class="quiz-card">
+                    <h3>💸 Competitors Are Faster</h3>
+                    <p>Other businesses respond instantly. You're losing clients simply because they reply first.</p>
+                </div>
             </div>
+
+            <p class="quiz-cta">Sound familiar? Let's fix it.</p>
         </div>
     </section>
 
@@ -608,144 +572,112 @@
     <section class="industries" id="industries">
         <div class="container">
             <h2>Industries We Serve</h2>
-            <p class="industries-intro">We specialize in AI automation for women-owned businesses in service-based industries where customer experience and retention drive revenue.</p>
+            <p class="industries-intro">We specialize in service-based businesses where customer experience and retention directly impact revenue.</p>
             
             <div class="industries-grid">
                 <div class="industry-card">
                     <div class="industry-icon">💆‍♀️</div>
-                    <h3>MedSpas</h3>
-                    <p>Reduce no-shows, automate appointment reminders, and increase package rebooking rates.</p>
+                    <h3>MedSpas & Aesthetics</h3>
+                    <p>Reduce no-shows, increase rebooking rates, and fill your calendar consistently.</p>
                 </div>
                 
                 <div class="industry-card">
                     <div class="industry-icon">💇‍♀️</div>
                     <h3>Salons & Beauty</h3>
-                    <p>Keep clients coming back with automated rebooking systems and birthday campaigns.</p>
+                    <p>Automate rebooking reminders and turn one-time clients into regulars.</p>
                 </div>
                 
                 <div class="industry-card">
                     <div class="industry-icon">💪</div>
                     <h3>Fitness Studios</h3>
-                    <p>Re-engage dormant members and convert trial clients into long-term memberships.</p>
+                    <p>Re-engage dormant members before they cancel and convert trials into memberships.</p>
                 </div>
                 
                 <div class="industry-card">
                     <div class="industry-icon">📸</div>
                     <h3>Photography</h3>
-                    <p>Never lose an inquiry again—automate lead follow-up and milestone reminders.</p>
+                    <p>Never miss an inquiry again with instant response and systematic follow-up.</p>
                 </div>
                 
                 <div class="industry-card">
                     <div class="industry-icon">🛍️</div>
-                    <h3>Boutiques</h3>
-                    <p>Turn one-time buyers into loyal customers with personalized follow-up campaigns.</p>
+                    <h3>Boutiques & Retail</h3>
+                    <p>Turn browsers into buyers and one-time customers into loyal fans.</p>
                 </div>
                 
                 <div class="industry-card">
                     <div class="industry-icon">👶</div>
-                    <h3>Childcare</h3>
-                    <p>Manage waitlists, automate parent communication, and streamline enrollment.</p>
+                    <h3>Childcare & Preschools</h3>
+                    <p>Manage waitlists effortlessly and automate parent communication.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Problems Section -->
-    <section class="problems">
+    <!-- How It Works -->
+    <section class="how-it-works">
         <div class="container">
-            <h2>Sound Familiar?</h2>
-            <p class="problems-intro">You're not alone. These are the challenges every women-owned service business faces—and exactly what we solve.</p>
+            <h2>How We Work Together</h2>
+            <p class="how-intro">No cookie-cutter packages. Every business has unique challenges. Here's our process:</p>
             
-            <div class="problems-grid">
-                <div class="problem-card">
-                    <h3>😓 No-Shows Are Killing Your Revenue</h3>
-                    <p>Empty appointment slots cost you hundreds per day. You need automated reminders and confirmations that actually work.</p>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Discovery Call</h3>
+                    <p>We spend 15 minutes understanding your specific challenges and where you're losing money.</p>
                 </div>
                 
-                <div class="problem-card">
-                    <h3>📧 Leads Fall Through the Cracks</h3>
-                    <p>Someone inquires, you're busy with a client, and you forget to follow up. By the time you respond, they've booked elsewhere.</p>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Custom Solution</h3>
+                    <p>Based on what we learn, we design an automation system tailored to your exact needs.</p>
                 </div>
                 
-                <div class="problem-card">
-                    <h3>🔁 Clients Don't Come Back</h3>
-                    <p>You deliver amazing service, but customers forget to rebook. There's no system to bring them back for their next appointment.</p>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Implementation</h3>
+                    <p>We build and integrate the system with your existing tools. Typically takes 1-3 weeks.</p>
                 </div>
                 
-                <div class="problem-card">
-                    <h3>⏰ You're Working IN Your Business, Not ON It</h3>
-                    <p>Every day is consumed by emails, calls, and admin work. There's no time left for growth or strategic thinking.</p>
-                </div>
-                
-                <div class="problem-card">
-                    <h3>⭐ Getting Reviews Feels Awkward</h3>
-                    <p>You know reviews drive new business, but asking for them in person feels uncomfortable. Most clients leave without ever leaving a review.</p>
-                </div>
-                
-                <div class="problem-card">
-                    <h3>💸 Competitors Are Stealing Your Market Share</h3>
-                    <p>Other businesses have slick systems and instant follow-up. You're losing clients to companies that simply respond faster.</p>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Ongoing Support</h3>
+                    <p>We don't disappear after launch. Continuous optimization to ensure you're getting results.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="services" id="packages">
+    <!-- Results Section -->
+    <section class="results">
         <div class="container">
-            <h2>Choose Your Solution</h2>
-            <p class="services-intro">Flexible packages designed specifically for women-owned service businesses. Pick the level of automation that fits where you are right now.</p>
+            <h2>What Results Look Like</h2>
+            <p class="results-intro">These are the kinds of outcomes our clients see within the first 90 days.</p>
             
-            <div class="service-packages">
-                <div class="package">
-                    <h3>Client Retention System</h3>
-                    <div class="price">$997</div>
-                    <ul>
-                        <li>Automated appointment reminders</li>
-                        <li>Rebooking campaigns</li>
-                        <li>Email & SMS integration</li>
-                        <li>Basic analytics dashboard</li>
-                        <li>30 days of support</li>
-                    </ul>
-                    <button class="package-btn" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get Started</button>
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="result-stat">60-70%</div>
+                    <h3>No-Show Reduction</h3>
+                    <p>Automated confirmations recover most no-shows before they happen.</p>
                 </div>
                 
-                <div class="package featured">
-                    <span class="popular-badge">Most Popular</span>
-                    <h3>Growth System</h3>
-                    <div class="price">$2,497</div>
-                    <ul>
-                        <li>Everything in Client Retention</li>
-                        <li>AI-powered lead follow-up</li>
-                        <li>Review request automation</li>
-                        <li>Customer segmentation</li>
-                        <li>Personalized campaigns</li>
-                        <li>60 days of support + training</li>
-                    </ul>
-                    <button class="package-btn" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get Started</button>
+                <div class="result-card">
+                    <div class="result-stat">20-30%</div>
+                    <h3>More Bookings</h3>
+                    <p>Instant lead response and systematic follow-up converts inquiries that would've been lost.</p>
                 </div>
                 
-                <div class="package">
-                    <h3>Premium System</h3>
-                    <div class="price">$4,997</div>
-                    <ul>
-                        <li>Everything in Growth System</li>
-                        <li>AI chatbot for website/social</li>
-                        <li>Advanced predictive analytics</li>
-                        <li>Multi-location support</li>
-                        <li>VIP client tracking</li>
-                        <li>90 days priority support</li>
-                    </ul>
-                    <button class="package-btn" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get Started</button>
+                <div class="result-card">
+                    <div class="result-stat">35-40%</div>
+                    <h3>Customer Return Rate</h3>
+                    <p>Automated rebooking campaigns bring customers back who would've forgotten.</p>
                 </div>
-            </div>
-            
-            <div class="retainer-section">
-                <h3>Ongoing Support & Optimization</h3>
-                <p style="font-style: italic; margin-bottom: 25px;">Keep your systems running smoothly and continuously improving</p>
-                <p><strong>Essential:</strong> $297/month - Updates, maintenance & email support (5 hours)</p>
-                <p><strong>Growth:</strong> $697/month - Active optimization & strategy calls (12 hours)</p>
-                <p><strong>Premium:</strong> $1,497/month - Dedicated support & quarterly planning (25 hours)</p>
+                
+                <div class="result-card">
+                    <div class="result-stat">10-15 hrs</div>
+                    <h3>Time Saved Per Week</h3>
+                    <p>Admin work handled automatically means more time for revenue-generating activities.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -754,19 +686,19 @@
     <section class="contact" id="contact">
         <div class="container">
             <h2>Let's Talk About Your Business</h2>
-            <p class="contact-intro">No pressure. No hard sell. Just a genuine conversation about your challenges and how AI automation can help you grow.</p>
+            <p class="contact-intro">Book a 15-minute call. No pressure, no pitch. Just an honest conversation about where you're losing money and how to fix it.</p>
             
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3>Ready to Get Started?</h3>
+                    <h3>Get Started Today</h3>
                     <p><strong>Phone:</strong> (657) 455-2894</p>
                     <p><strong>Email:</strong> sharpsmbadvisory@outlook.com</p>
-                    <p><strong>Serving:</strong> Women-Owned Businesses Nationwide</p>
-                    <p style="margin-top: 30px; font-size: 1.05em; line-height: 1.7;">I work exclusively with women-owned businesses nationwide because I believe you deserve technology that works as hard as you do. Let's build systems that give you your time back.</p>
+                    <p><strong>Serving:</strong> Service Businesses Nationwide</p>
+                    <p style="margin-top: 30px; font-size: 1.05em; line-height: 1.7;">I work with service business owners who are tired of watching revenue slip through the cracks. If you're ready to stop the bleeding and build systems that actually work, let's talk.</p>
                 </div>
                 
                 <div class="contact-form">
-                    <h3>Schedule Your Free Consultation</h3>
+                    <h3>Book Your Free Call</h3>
                     <form action="https://formspree.io/f/xgvnypgk" method="POST">
                         <div class="form-group">
                             <label for="name">Your Name *</label>
@@ -798,16 +730,16 @@
                                 <option value="photography">Photography Studio</option>
                                 <option value="boutique">Boutique / Retail</option>
                                 <option value="childcare">Childcare / Preschool</option>
-                                <option value="other">Other</option>
+                                <option value="other">Other Service Business</option>
                             </select>
                         </div>
                         
                         <div class="form-group">
                             <label for="message">What's your biggest challenge right now? *</label>
-                            <textarea id="message" name="message" required placeholder="e.g., Too many no-shows, can't keep up with lead follow-up, clients don't rebook..."></textarea>
+                            <textarea id="message" name="message" required placeholder="e.g., Too many no-shows, can't keep up with inquiries, customers don't come back..."></textarea>
                         </div>
                         
-                        <button type="submit" class="submit-btn">Book My Free Consultation</button>
+                        <button type="submit" class="submit-btn">Book My Free Call</button>
                     </form>
                 </div>
             </div>
@@ -819,12 +751,11 @@
         <div class="container">
             <div class="footer-links">
                 <a href="#industries">Industries</a>
-                <a href="#packages">Packages</a>
                 <a href="#contact">Contact</a>
                 <a href="tel:6574552894">Call Now</a>
             </div>
             <p>&copy; 2025 Sharpnack AI Solutions. All rights reserved.</p>
-            <p style="font-size: 0.95em; margin-top: 15px;">AI Automation Solutions for Women-Owned Businesses Nationwide</p>
+            <p style="font-size: 0.95em; margin-top: 15px;">AI Automation Solutions for Service Businesses Nationwide</p>
         </div>
     </footer>
 
@@ -838,3 +769,8 @@
                         behavior: 'smooth'
                     });
                 }
+            });
+        });
+    </script>
+</body>
+</html>
