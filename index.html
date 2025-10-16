@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Automation Solutions for Small & Medium Businesses</title>
+    <title>AI Solutions for Women-Owned Businesses | Sharpnack AI</title>
     <style>
         * {
             margin: 0;
@@ -12,7 +12,7 @@
         }
         
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
         }
@@ -25,283 +25,430 @@
         
         /* Header/Hero Section */
         .hero {
-            background: linear-gradient(135deg, #003366 0%, #2d5f8f 100%);
+            background: linear-gradient(135deg, #6B46C1 0%, #9F7AEA 100%);
             color: white;
-            padding: 80px 0;
+            padding: 100px 0 80px 0;
             text-align: center;
         }
         
         .hero h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            font-weight: bold;
+            font-size: 2.8em;
+            margin-bottom: 15px;
+            font-weight: 700;
+            line-height: 1.2;
         }
         
-        .hero .title {
-            font-size: 1.3em;
-            margin-bottom: 20px;
-            color: #e0e0e0;
+        .hero .subtitle {
+            font-size: 1.4em;
+            margin-bottom: 25px;
+            color: #F3E8FF;
+            font-weight: 300;
         }
         
         .hero .tagline {
-            font-size: 1.1em;
-            margin-bottom: 30px;
-            max-width: 600px;
+            font-size: 1.2em;
+            margin-bottom: 35px;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
+            line-height: 1.6;
         }
         
         .hero .phone {
-            font-size: 1.2em;
+            font-size: 1.3em;
             margin-bottom: 30px;
+            font-weight: 500;
         }
         
         .cta-button {
             display: inline-block;
-            background-color: #ff6b35;
+            background-color: #F59E0B;
             color: white;
-            padding: 15px 30px;
+            padding: 18px 40px;
             text-decoration: none;
-            border-radius: 5px;
-            font-size: 1.1em;
-            font-weight: bold;
-            transition: background-color 0.3s;
+            border-radius: 8px;
+            font-size: 1.15em;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
         }
         
         .cta-button:hover {
-            background-color: #e55a2b;
+            background-color: #D97706;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+        }
+
+        /* Trust Bar */
+        .trust-bar {
+            background: #F9FAFB;
+            padding: 30px 0;
+            text-align: center;
+            border-bottom: 1px solid #E5E7EB;
+        }
+
+        .trust-bar p {
+            font-size: 1.1em;
+            color: #6B7280;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .trust-icons {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .trust-item {
+            font-size: 0.95em;
+            color: #4B5563;
+            font-weight: 500;
+        }
+        
+        /* Industries Section */
+        .industries {
+            padding: 70px 0;
+            background: white;
+        }
+
+        .industries h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2.4em;
+            color: #6B46C1;
+            font-weight: 700;
+        }
+
+        .industries-intro {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 1.15em;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #4B5563;
+            line-height: 1.7;
+        }
+
+        .industries-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .industry-card {
+            background: linear-gradient(135deg, #F9FAFB 0%, #F3F4F6 100%);
+            padding: 35px;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .industry-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(107, 70, 193, 0.15);
+            border-color: #9F7AEA;
+        }
+
+        .industry-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+
+        .industry-card h3 {
+            color: #6B46C1;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+            font-weight: 600;
+        }
+
+        .industry-card p {
+            color: #6B7280;
+            font-size: 1em;
+            line-height: 1.6;
         }
         
         /* Services Section */
         .services {
-            padding: 60px 0;
-            background-color: #f8f9fa;
+            padding: 70px 0;
+            background: linear-gradient(to bottom, #F9FAFB 0%, white 100%);
         }
         
         .services h2 {
             text-align: center;
             margin-bottom: 20px;
-            font-size: 2.2em;
-            color: #003366;
+            font-size: 2.4em;
+            color: #6B46C1;
+            font-weight: 700;
         }
         
         .services-intro {
             text-align: center;
             margin-bottom: 50px;
-            font-size: 1.1em;
+            font-size: 1.15em;
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
+            color: #4B5563;
+            line-height: 1.7;
         }
         
         .service-packages {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
             margin-bottom: 50px;
         }
         
         .package {
             background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
             text-align: center;
             position: relative;
+            border: 2px solid #E5E7EB;
+            transition: all 0.3s;
+        }
+
+        .package:hover {
+            border-color: #9F7AEA;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(107, 70, 193, 0.15);
         }
 
         .package.featured {
-            border: 3px solid #ff6b35;
+            border: 3px solid #F59E0B;
+            background: linear-gradient(to bottom, #FFFBEB 0%, white 100%);
         }
 
         .popular-badge {
             position: absolute;
             top: -15px;
             right: 20px;
-            background: #ff6b35;
+            background: #F59E0B;
             color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
+            padding: 8px 20px;
+            border-radius: 25px;
             font-size: 0.9em;
-            font-weight: bold;
+            font-weight: 600;
+            box-shadow: 0 4px 10px rgba(245, 158, 11, 0.3);
         }
         
         .package h3 {
-            color: #003366;
+            color: #6B46C1;
             margin-bottom: 15px;
-            font-size: 1.5em;
+            font-size: 1.6em;
+            font-weight: 700;
         }
         
         .package .price {
-            font-size: 2em;
-            color: #ff6b35;
-            font-weight: bold;
-            margin-bottom: 20px;
+            font-size: 2.2em;
+            color: #F59E0B;
+            font-weight: 700;
+            margin-bottom: 25px;
         }
         
         .package ul {
             text-align: left;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
         
         .package ul li {
-            margin-bottom: 8px;
+            margin-bottom: 12px;
             list-style: none;
-            padding-left: 20px;
+            padding-left: 30px;
             position: relative;
+            color: #4B5563;
+            font-size: 1.05em;
         }
         
         .package ul li:before {
             content: "✓";
             position: absolute;
             left: 0;
-            color: #28a745;
+            color: #10B981;
             font-weight: bold;
+            font-size: 1.3em;
         }
 
         .package-btn {
-            background-color: #003366;
+            background: linear-gradient(135deg, #6B46C1 0%, #9F7AEA 100%);
             color: white;
-            padding: 12px 30px;
+            padding: 14px 35px;
             border: none;
-            border-radius: 5px;
-            font-size: 1em;
+            border-radius: 8px;
+            font-size: 1.05em;
             cursor: pointer;
             width: 100%;
-            font-weight: bold;
-            transition: background-color 0.3s;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(107, 70, 193, 0.2);
         }
 
         .package-btn:hover {
-            background-color: #002244;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(107, 70, 193, 0.3);
         }
 
         .retainer-section {
             text-align: center;
             background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            margin-top: 30px;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            margin-top: 40px;
+            border: 2px solid #E5E7EB;
         }
 
         .retainer-section h3 {
-            color: #003366;
-            margin-bottom: 20px;
-            font-size: 1.8em;
+            color: #6B46C1;
+            margin-bottom: 25px;
+            font-size: 1.9em;
+            font-weight: 700;
         }
 
         .retainer-section p {
-            margin-bottom: 15px;
+            margin-bottom: 18px;
             font-size: 1.1em;
+            color: #4B5563;
         }
 
         .retainer-section p strong {
-            color: #ff6b35;
-            font-size: 1.2em;
-        }
-        
-        /* Add-Ons Section */
-        .addons {
-            padding: 60px 0;
+            color: #F59E0B;
+            font-size: 1.15em;
+            font-weight: 600;
         }
 
-        .addons h2 {
+        /* Problems Section */
+        .problems {
+            padding: 70px 0;
+            background: linear-gradient(135deg, #6B46C1 0%, #9F7AEA 100%);
+            color: white;
+        }
+
+        .problems h2 {
             text-align: center;
             margin-bottom: 20px;
-            font-size: 2.2em;
-            color: #003366;
+            font-size: 2.4em;
+            font-weight: 700;
         }
 
-        .addons-intro {
+        .problems-intro {
             text-align: center;
             margin-bottom: 50px;
-            font-size: 1.1em;
+            font-size: 1.15em;
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
+            line-height: 1.7;
         }
 
-        .addons-grid {
+        .problems-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
         }
 
-        .addon-card {
-            background: #f8f9fa;
-            padding: 25px;
-            border-radius: 8px;
-            border-left: 5px solid #003366;
-            transition: transform 0.3s;
+        .problem-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s;
         }
 
-        .addon-card:hover {
+        .problem-card:hover {
+            background: rgba(255, 255, 255, 0.15);
             transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
         }
 
-        .addon-card h3 {
-            color: #003366;
-            margin-bottom: 10px;
+        .problem-card h3 {
+            color: #FDE68A;
+            margin-bottom: 15px;
             font-size: 1.3em;
+            font-weight: 600;
         }
 
-        .addon-card .price {
-            color: #ff6b35;
-            font-size: 1.5em;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-
-        .addon-card p {
-            margin-bottom: 15px;
-            color: #666;
+        .problem-card p {
+            font-size: 1.05em;
+            line-height: 1.6;
         }
         
         /* Contact Section */
         .contact {
-            padding: 60px 0;
-            background-color: #003366;
-            color: white;
+            padding: 70px 0;
+            background: white;
         }
         
         .contact h2 {
             text-align: center;
-            margin-bottom: 30px;
-            font-size: 2.2em;
+            margin-bottom: 20px;
+            font-size: 2.4em;
+            color: #6B46C1;
+            font-weight: 700;
+        }
+
+        .contact-intro {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 1.15em;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #4B5563;
+            line-height: 1.7;
         }
         
         .contact-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 50px;
             align-items: start;
         }
         
         .contact-info {
             text-align: center;
+            padding: 30px;
         }
         
         .contact-info h3 {
-            margin-bottom: 20px;
-            color: #ff6b35;
+            margin-bottom: 25px;
+            color: #6B46C1;
+            font-size: 1.6em;
+            font-weight: 700;
         }
         
         .contact-info p {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             font-size: 1.1em;
+            color: #4B5563;
+        }
+
+        .contact-info p strong {
+            color: #6B46C1;
+            font-weight: 600;
         }
         
         .contact-form {
-            background: rgba(255,255,255,0.1);
-            padding: 30px;
-            border-radius: 8px;
+            background: linear-gradient(135deg, #F9FAFB 0%, #F3F4F6 100%);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
         }
         
         .contact-form h3 {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             text-align: center;
+            color: #6B46C1;
+            font-size: 1.6em;
+            font-weight: 700;
         }
         
         .form-group {
@@ -310,229 +457,123 @@
         
         .form-group label {
             display: block;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
+            color: #4B5563;
+            font-weight: 500;
+            font-size: 1.05em;
         }
         
         .form-group input,
         .form-group textarea,
         .form-group select {
             width: 100%;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
+            padding: 14px;
+            border: 2px solid #E5E7EB;
+            border-radius: 8px;
             font-size: 16px;
+            transition: all 0.3s;
+            background: white;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #9F7AEA;
+            box-shadow: 0 0 0 3px rgba(159, 122, 234, 0.1);
         }
         
         .form-group textarea {
-            height: 120px;
+            height: 140px;
             resize: vertical;
         }
         
         .submit-btn {
-            background-color: #ff6b35;
+            background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
             color: white;
-            padding: 12px 30px;
+            padding: 16px 35px;
             border: none;
-            border-radius: 5px;
-            font-size: 1.1em;
+            border-radius: 8px;
+            font-size: 1.15em;
             cursor: pointer;
             width: 100%;
-            font-weight: bold;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
         }
         
         .submit-btn:hover {
-            background-color: #e55a2b;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
         }
         
         /* Footer */
         .footer {
-            background-color: #1a1a1a;
+            background-color: #1F2937;
             color: white;
-            padding: 30px 0;
+            padding: 40px 0;
             text-align: center;
         }
         
         .footer-links {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
         
         .footer-links a {
-            color: #ff6b35;
+            color: #F59E0B;
             text-decoration: none;
-            margin: 0 15px;
+            margin: 0 20px;
+            font-weight: 500;
+            transition: color 0.3s;
         }
         
         .footer-links a:hover {
-            color: white;
+            color: #FDE68A;
+        }
+
+        .footer p {
+            color: #D1D5DB;
         }
         
         /* Mobile Responsive */
         @media (max-width: 768px) {
             .hero {
-                padding: 60px 0;
+                padding: 70px 0 50px 0;
             }
             
             .hero h1 {
                 font-size: 2em;
             }
             
-            .hero .title {
-                font-size: 1.1em;
-            }
-            
-            .hero .tagline {
-                font-size: 1em;
-                padding: 0 10px;
-            }
-            
-            .hero .phone {
-                font-size: 1.1em;
-            }
-            
-            .service-packages,
-            .addons-grid,
-            .contact-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .container {
-                padding: 0 15px;
-            }
-            
-            .services,
-            .addons,
-            .contact {
-                padding: 40px 0;
-            }
-            
-            .services h2,
-            .addons h2,
-            .contact h2 {
-                font-size: 1.8em;
-            }
-            
-            .package {
-                padding: 20px;
-                margin-bottom: 20px;
-            }
-            
-            .package .price {
-                font-size: 1.6em;
-            }
-            
-            .addon-card {
-                padding: 20px;
-            }
-            
-            .contact-content {
-                gap: 30px;
-            }
-            
-            .contact-form {
-                padding: 20px;
-            }
-            
-            .form-group {
-                margin-bottom: 15px;
-            }
-            
-            .form-group input,
-            .form-group textarea,
-            .form-group select {
-                padding: 12px;
-                font-size: 16px;
-            }
-            
-            .submit-btn {
-                padding: 15px 20px;
-                font-size: 1em;
-            }
-        }
-        
-        /* Tablet Responsive */
-        @media (max-width: 1024px) and (min-width: 769px) {
-            .hero {
-                padding: 70px 0;
-            }
-            
-            .hero h1 {
-                font-size: 2.2em;
+            .hero .subtitle {
+                font-size: 1.15em;
             }
             
             .hero .tagline {
                 font-size: 1.05em;
-            }
-            
-            .service-packages {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .addons-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .contact-content {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-            
-            .package {
-                padding: 25px;
-            }
-            
-            .addon-card {
-                padding: 25px;
-            }
-        }
-        
-        /* Small Mobile Responsive */
-        @media (max-width: 480px) {
-            .hero {
-                padding: 50px 0;
-            }
-            
-            .hero h1 {
-                font-size: 1.8em;
-            }
-            
-            .hero .title {
-                font-size: 1em;
-            }
-            
-            .hero .tagline {
-                font-size: 0.9em;
-                padding: 0 15px;
-            }
-            
-            .cta-button {
-                padding: 12px 25px;
-                font-size: 1em;
-            }
-            
-            .container {
                 padding: 0 10px;
             }
             
+            .industries-grid,
+            .service-packages,
+            .problems-grid,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+            
             .package {
-                padding: 15px;
+                padding: 30px 20px;
+            }
+
+            .trust-icons {
+                gap: 20px;
             }
             
-            .package .price {
-                font-size: 1.4em;
-            }
-            
-            .addon-card {
-                padding: 15px;
-            }
-            
-            .contact-form {
-                padding: 15px;
-            }
-            
-            .form-group input,
-            .form-group textarea,
-            .form-group select {
-                padding: 10px;
+            .services h2,
+            .industries h2,
+            .problems h2,
+            .contact h2 {
+                font-size: 1.9em;
             }
         }
     </style>
@@ -541,29 +582,129 @@
     <!-- Header/Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>AI Automation Solutions</h1>
-            <p class="title">Small & Medium Business Automation Specialist</p>
-            <p class="tagline">Helping Orange County Businesses Save Time, Reduce Errors, and Increase Revenue Through Intelligent Automation</p>
-            <p class="phone">Phone: (657) 455-2894</p>
-            <a href="#contact" class="cta-button">Book a Consultation</a>
+            <h1>AI Solutions Built for<br>Women-Owned Businesses</h1>
+            <p class="subtitle">Helping MedSpas, Salons, Fitness Studios & More Thrive</p>
+            <p class="tagline">Stop losing revenue to no-shows, abandoned leads, and manual follow-ups. Let AI handle the busy work while you focus on what you do best—serving your clients.</p>
+            <p class="phone">📞 (657) 455-2894</p>
+            <a href="#contact" class="cta-button">Schedule Your Free Consultation</a>
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <section class="trust-bar">
+        <div class="container">
+            <p>Trusted by Women Business Owners Nationwide</p>
+            <div class="trust-icons">
+                <span class="trust-item">💜 MedSpas & Aesthetics</span>
+                <span class="trust-item">💇‍♀️ Salons & Beauty</span>
+                <span class="trust-item">💪 Fitness Studios</span>
+                <span class="trust-item">📸 Photography</span>
+                <span class="trust-item">👶 Childcare</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section class="industries" id="industries">
+        <div class="container">
+            <h2>Industries We Serve</h2>
+            <p class="industries-intro">We specialize in AI automation for women-owned businesses in service-based industries where customer experience and retention drive revenue.</p>
+            
+            <div class="industries-grid">
+                <div class="industry-card">
+                    <div class="industry-icon">💆‍♀️</div>
+                    <h3>MedSpas</h3>
+                    <p>Reduce no-shows, automate appointment reminders, and increase package rebooking rates.</p>
+                </div>
+                
+                <div class="industry-card">
+                    <div class="industry-icon">💇‍♀️</div>
+                    <h3>Salons & Beauty</h3>
+                    <p>Keep clients coming back with automated rebooking systems and birthday campaigns.</p>
+                </div>
+                
+                <div class="industry-card">
+                    <div class="industry-icon">💪</div>
+                    <h3>Fitness Studios</h3>
+                    <p>Re-engage dormant members and convert trial clients into long-term memberships.</p>
+                </div>
+                
+                <div class="industry-card">
+                    <div class="industry-icon">📸</div>
+                    <h3>Photography</h3>
+                    <p>Never lose an inquiry again—automate lead follow-up and milestone reminders.</p>
+                </div>
+                
+                <div class="industry-card">
+                    <div class="industry-icon">🛍️</div>
+                    <h3>Boutiques</h3>
+                    <p>Turn one-time buyers into loyal customers with personalized follow-up campaigns.</p>
+                </div>
+                
+                <div class="industry-card">
+                    <div class="industry-icon">👶</div>
+                    <h3>Childcare</h3>
+                    <p>Manage waitlists, automate parent communication, and streamline enrollment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problems Section -->
+    <section class="problems">
+        <div class="container">
+            <h2>Sound Familiar?</h2>
+            <p class="problems-intro">You're not alone. These are the challenges every women-owned service business faces—and exactly what we solve.</p>
+            
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <h3>😓 No-Shows Are Killing Your Revenue</h3>
+                    <p>Empty appointment slots cost you hundreds per day. You need automated reminders and confirmations that actually work.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <h3>📧 Leads Fall Through the Cracks</h3>
+                    <p>Someone inquires, you're busy with a client, and you forget to follow up. By the time you respond, they've booked elsewhere.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <h3>🔁 Clients Don't Come Back</h3>
+                    <p>You deliver amazing service, but customers forget to rebook. There's no system to bring them back for their next appointment.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <h3>⏰ You're Working IN Your Business, Not ON It</h3>
+                    <p>Every day is consumed by emails, calls, and admin work. There's no time left for growth or strategic thinking.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <h3>⭐ Getting Reviews Feels Awkward</h3>
+                    <p>You know reviews drive new business, but asking for them in person feels uncomfortable. Most clients leave without ever leaving a review.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <h3>💸 Competitors Are Stealing Your Market Share</h3>
+                    <p>Other businesses have slick systems and instant follow-up. You're losing clients to companies that simply respond faster.</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Services Section -->
     <section class="services" id="packages">
         <div class="container">
-            <h2>Choose Your Package</h2>
-            <p class="services-intro">Flexible automation solutions designed to meet your business needs and help you compete with larger enterprises through intelligent technology.</p>
+            <h2>Choose Your Solution</h2>
+            <p class="services-intro">Flexible packages designed specifically for women-owned service businesses. Pick the level of automation that fits where you are right now.</p>
             
             <div class="service-packages">
                 <div class="package">
-                    <h3>Starter</h3>
+                    <h3>Client Retention System</h3>
                     <div class="price">$997</div>
                     <ul>
-                        <li>Basic workflow automation</li>
-                        <li>Email automation setup</li>
-                        <li>CRM integration</li>
-                        <li>Initial process documentation</li>
+                        <li>Automated appointment reminders</li>
+                        <li>Rebooking campaigns</li>
+                        <li>Email & SMS integration</li>
+                        <li>Basic analytics dashboard</li>
                         <li>30 days of support</li>
                     </ul>
                     <button class="package-btn" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get Started</button>
@@ -571,91 +712,40 @@
                 
                 <div class="package featured">
                     <span class="popular-badge">Most Popular</span>
-                    <h3>Growth</h3>
+                    <h3>Growth System</h3>
                     <div class="price">$2,497</div>
                     <ul>
-                        <li>Advanced workflow automation</li>
-                        <li>Multi-channel integration</li>
-                        <li>Custom AI chatbot</li>
-                        <li>Lead scoring system</li>
-                        <li>Staff training session</li>
-                        <li>60 days of support</li>
+                        <li>Everything in Client Retention</li>
+                        <li>AI-powered lead follow-up</li>
+                        <li>Review request automation</li>
+                        <li>Customer segmentation</li>
+                        <li>Personalized campaigns</li>
+                        <li>60 days of support + training</li>
                     </ul>
                     <button class="package-btn" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get Started</button>
                 </div>
                 
                 <div class="package">
-                    <h3>Premium</h3>
+                    <h3>Premium System</h3>
                     <div class="price">$4,997</div>
                     <ul>
-                        <li>Enterprise-grade automation</li>
-                        <li>Full system integration</li>
-                        <li>Advanced AI analytics</li>
-                        <li>Custom dashboards</li>
-                        <li>Monthly optimization consultation</li>
-                        <li>Priority support (90 days)</li>
+                        <li>Everything in Growth System</li>
+                        <li>AI chatbot for website/social</li>
+                        <li>Advanced predictive analytics</li>
+                        <li>Multi-location support</li>
+                        <li>VIP client tracking</li>
+                        <li>90 days priority support</li>
                     </ul>
                     <button class="package-btn" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get Started</button>
                 </div>
             </div>
             
             <div class="retainer-section">
-                <h3>Monthly Retainer Options</h3>
-                <p style="font-style: italic; margin-bottom: 25px;">Retainers can be paired with any package for ongoing support and optimization</p>
-                <p><strong>Basic:</strong> $297/month - Essential maintenance and updates (5 hours monthly support)</p>
-                <p><strong>Growth:</strong> $697/month - Active optimization and improvements (12 hours monthly support)</p>
-                <p><strong>Premium:</strong> $1,497/month - Dedicated support and strategic consulting (25 hours monthly support)</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Add-Ons Section -->
-    <section class="addons" id="addons">
-        <div class="container">
-            <h2>Powerful Add-Ons</h2>
-            <p class="addons-intro">Enhance your package with specialized features designed for maximum impact in the Orange County market.</p>
-            <div class="addons-grid">
-                <div class="addon-card">
-                    <h3>Personalized Email Campaigns</h3>
-                    <div class="price">$197/mo</div>
-                    <p>Automated email sequences tailored to customer behavior and preferences to boost engagement and conversions.</p>
-                    <button class="package-btn" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Add This Feature</button>
-                </div>
-                
-                <div class="addon-card">
-                    <h3>Advanced Lead Scoring</h3>
-                    <div class="price">$247/mo</div>
-                    <p>AI-powered lead qualification that automatically prioritizes your best prospects for maximum ROI.</p>
-                    <button class="package-btn" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Add This Feature</button>
-                </div>
-                
-                <div class="addon-card">
-                    <h3>Social Media Content Automation</h3>
-                    <div class="price">$177/mo</div>
-                    <p>Schedule and publish engaging content across all your social platforms consistently and professionally.</p>
-                    <button class="package-btn" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Add This Feature</button>
-                </div>
-                
-                <div class="addon-card">
-                    <h3>Analytics Dashboard</h3>
-                    <div class="price">$297 setup + $127/mo</div>
-                    <p>Custom dashboard with real-time insights and KPI tracking for data-driven business decisions.</p>
-                    <button class="package-btn" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Add This Feature</button>
-                </div>
-                
-                <div class="addon-card">
-                    <h3>Customer Retention Insights</h3>
-                    <div class="price">$247/mo</div>
-                    <p>Predictive analytics to identify at-risk customers and improve retention rates through proactive engagement.</p>
-                    <button class="package-btn" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Add This Feature</button>
-                </div>
-                
-                <div class="addon-card">
-                    <h3>Chatbot / Virtual Assistant</h3>
-                    <div class="price">$197/mo</div>
-                    <p>24/7 AI-powered customer support that handles inquiries and qualifies leads automatically.</p>
-                    <button class="package-btn" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Add This Feature</button>
-                </div>
+                <h3>Ongoing Support & Optimization</h3>
+                <p style="font-style: italic; margin-bottom: 25px;">Keep your systems running smoothly and continuously improving</p>
+                <p><strong>Essential:</strong> $297/month - Updates, maintenance & email support (5 hours)</p>
+                <p><strong>Growth:</strong> $697/month - Active optimization & strategy calls (12 hours)</p>
+                <p><strong>Premium:</strong> $1,497/month - Dedicated support & quarterly planning (25 hours)</p>
             </div>
         </div>
     </section>
@@ -663,22 +753,29 @@
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
-            <h2>Get Started Today</h2>
+            <h2>Let's Talk About Your Business</h2>
+            <p class="contact-intro">No pressure. No hard sell. Just a genuine conversation about your challenges and how AI automation can help you grow.</p>
+            
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3>Contact Information</h3>
+                    <h3>Ready to Get Started?</h3>
                     <p><strong>Phone:</strong> (657) 455-2894</p>
                     <p><strong>Email:</strong> sharpsmbadvisory@outlook.com</p>
-                    <p><strong>Service Area:</strong> Orange County, CA</p>
-                    <p style="margin-top: 20px;">Ready to automate your business and unlock new growth opportunities? Schedule your free consultation today.</p>
+                    <p><strong>Serving:</strong> Women-Owned Businesses Nationwide</p>
+                    <p style="margin-top: 30px; font-size: 1.05em; line-height: 1.7;">I work exclusively with women-owned businesses nationwide because I believe you deserve technology that works as hard as you do. Let's build systems that give you your time back.</p>
                 </div>
                 
                 <div class="contact-form">
-                    <h3>Book Your Consultation</h3>
+                    <h3>Schedule Your Free Consultation</h3>
                     <form action="https://formspree.io/f/xgvnypgk" method="POST">
                         <div class="form-group">
-                            <label for="name">Business Name / Your Name *</label>
+                            <label for="name">Your Name *</label>
                             <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="business-name">Business Name *</label>
+                            <input type="text" id="business-name" name="business-name" required>
                         </div>
                         
                         <div class="form-group">
@@ -692,16 +789,25 @@
                         </div>
                         
                         <div class="form-group">
-                            <label for="business-type">Business Type</label>
-                            <input type="text" id="business-type" name="business-type" placeholder="e.g., Real Estate, E-commerce, Retail">
+                            <label for="business-type">Your Industry *</label>
+                            <select id="business-type" name="business-type" required>
+                                <option value="">Select your industry...</option>
+                                <option value="medspa">MedSpa / Aesthetics</option>
+                                <option value="salon">Salon / Hair Salon</option>
+                                <option value="fitness">Fitness Studio / Gym</option>
+                                <option value="photography">Photography Studio</option>
+                                <option value="boutique">Boutique / Retail</option>
+                                <option value="childcare">Childcare / Preschool</option>
+                                <option value="other">Other</option>
+                            </select>
                         </div>
                         
                         <div class="form-group">
-                            <label for="message">What challenges are you facing? *</label>
-                            <textarea id="message" name="message" required placeholder="Tell us about your biggest time-consuming tasks or automation needs..."></textarea>
+                            <label for="message">What's your biggest challenge right now? *</label>
+                            <textarea id="message" name="message" required placeholder="e.g., Too many no-shows, can't keep up with lead follow-up, clients don't rebook..."></textarea>
                         </div>
                         
-                        <button type="submit" class="submit-btn">Book a Consultation</button>
+                        <button type="submit" class="submit-btn">Book My Free Consultation</button>
                     </form>
                 </div>
             </div>
@@ -712,18 +818,17 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-links">
+                <a href="#industries">Industries</a>
                 <a href="#packages">Packages</a>
-                <a href="#addons">Add-Ons</a>
                 <a href="#contact">Contact</a>
                 <a href="tel:6574552894">Call Now</a>
             </div>
-            <p>&copy; 2025 Ryan Sharpnack. All rights reserved.</p>
-            <p style="font-size: 0.9em; margin-top: 10px;">AI-Powered Automation Solutions for Orange County Businesses</p>
+            <p>&copy; 2025 Sharpnack AI Solutions. All rights reserved.</p>
+            <p style="font-size: 0.95em; margin-top: 15px;">AI Automation Solutions for Women-Owned Businesses Nationwide</p>
         </div>
     </footer>
 
     <script>
-        // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -733,8 +838,3 @@
                         behavior: 'smooth'
                     });
                 }
-            });
-        });
-    </script>
-</body>
-</html>
